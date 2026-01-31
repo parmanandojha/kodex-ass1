@@ -6,12 +6,23 @@
   <title>Acelia</title>
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Ensure navigation stays visible */
+    header nav {
+      position: fixed !important;
+      z-index: 9999 !important;
+    }
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
 <body class="overflow-x-hidden font-['Inter'] leading-[1.2]">
  
     <!--          Nav         --> 
-    <header class="relative">
-        <nav class="fixed w-full  p-[2%] bg-[#021c21] text-white text-[0.75rem]" aria-label="Main navigation">
+    <header class="relative z-50">
+        <nav class="fixed top-0 left-0 w-full z-50 p-[2%] bg-[#021c21] text-white text-[0.75rem]" aria-label="Main navigation">
         <div class="flex items-center justify-between">
             <div class="flex gap-12 items-center">
             <div class="h-[4vh] sm:h-[6vh]"> <img class="h-[100%]" src="./images/logo white.webp" alt="Acelia Logo"></div>
@@ -44,7 +55,6 @@
             </div>
         </div>
     </section>
-    </main>
 
     <!--          Footer            -->
 
@@ -73,6 +83,7 @@
         <div class="pt-4"><p class="w-full text-[1rem] font-light">© 2025 Acelia Inc. All rights reserved.</p></div>
                 
     </footer>
+    </main>
 
 </body>
 </html>
