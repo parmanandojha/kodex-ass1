@@ -10,40 +10,42 @@
 <body class="overflow-x-hidden font-['Inter'] leading-[1.2]">
  
     <!--          Nav         --> 
-    <div class="relative">
-        <nav class="fixed z-99 w-full p-[2%] bg-[#021c21] text-white text-[0.75rem]">
+    <header class="relative">
+        <nav class="fixed w-full p-[2%] bg-[#021c21] text-white text-[0.75rem]" aria-label="Main navigation">
         <div class="flex items-center justify-between">
             <div class="flex gap-12 items-center">
-            <div class="h-[4vh] sm:h-[6vh]"> <img class="h-[100%]" src="./images/logo white.webp" ></div>
-            <div class="flex gap-4 items-center">
-                <div><a href="./index.html">Home</a></div>
-                <div><a href="about.html">About</a></div>
-                <div><a href="./service.html">Services</a></div>
-                <div><a href="blog.html">Blog</a></div>
-                <div><a href="contact.html">Contact</a></div>
+            <div class="h-[4vh] sm:h-[6vh]"> <img class="h-[100%]" src="./images/logo white.webp" alt="Acelia Logo"></div>
+            <ul class="flex gap-4 items-center" role="list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
             </div>
-            </div>
-            <div class=" hidden sm:flex"><button class="bg-zinc-100 text-black px-6 py-4 rounded-lg">Contact</button></div>
+            <div class=" hidden sm:flex"><button type="button" class="bg-zinc-100 text-black px-6 py-4 rounded-lg">Contact</button></div>
         </div>
     </nav>
-    </div>
+    </header>
 
-
+<main>
+    <!-- Contact section would go here -->
+</main>
 
     <!--          Footer            -->
 
-    <div class="w-full h-full py-[10%] sm:py-[8%]  px-[2%] bg-[#021c21] text-zinc-100">
+    <footer class="w-full h-full py-[10%] sm:py-[8%]  px-[2%] bg-[#021c21] text-zinc-100">
         <div class="flex flex-col sm:flex-row justify-between gap-8">
-            <div class="text-[3.5rem] sm:text-[4rem] -tracking-[0.15rem] leading-none text-[#cdcbfe]">Ready to elevate your business?</div>
-            <div class="flex"><button class="bg-zinc-100 text-black px-6 py-4 rounded-lg">Contact</button></div>
+            <h2 class="text-[3.5rem] sm:text-[4rem] -tracking-[0.15rem] leading-none text-[#cdcbfe]">Ready to elevate your business?</h2>
+            <div class="flex"><button type="button" class="bg-zinc-100 text-black px-6 py-4 rounded-lg">Contact</button></div>
         </div>
         <div class="my-12 border border-zinc-800"></div>
         <div class="mb-12">
             <div class="text-[9.2rem] sm:text-[31rem] -tracking-[0.25rem] leading-none text-[#cdcbfe]">Acelia</div>
         </div>
         <div class="flex flex-col sm:flex-row gap-12">
-            <div class="w-full sm:w-[50%]"><div class="w-full sm:w-[80%] text-[1rem] font-light">Easily adapt to changes and scale your operations with our flexible infrastructure, designed to support your business growth.</div></div>
-                <div class="w-full sm:w-[50%]">
+            <div class="w-full sm:w-[50%]"><p class="w-full sm:w-[80%] text-[1rem] font-light">Easily adapt to changes and scale your operations with our flexible infrastructure, designed to support your business growth.</p></div>
+                <nav class="w-full sm:w-[50%]" aria-label="Footer navigation">
                     <div class="flex gap-4 justify-between sm:justify-end ">
                     <div><a href="./index.html">Home</a></div>
                     <div><a href="about.html">About</a></div>
@@ -51,12 +53,12 @@
                     <div><a href="blog.html">Blog</a></div>
                     <div><a href="contact.html">Contact</a></div>
                     </div>
-            </div>
+            </nav>
         </div>
         <div class="my-12 border border-zinc-800"></div>
-        <div class="pt-4"><div class="w-full text-[1rem] font-light">© 2025 Acelia Inc. All rights reserved.</div></div>
+        <div class="pt-4"><p class="w-full text-[1rem] font-light">© 2025 Acelia Inc. All rights reserved.</p></div>
                 
-    </div>
+    </footer>
 
 </body>
 </html>
