@@ -1,0 +1,18 @@
+/* Ensure navigation stays visible */
+header nav {
+  position: fixed !important;
+  z-index: 9999 !important;
+}
+
+/* Locomotive Scroll smooth scrolling (replaces native smooth scroll) */
+html.has-scroll-smooth {
+  overflow: hidden;
+}
+
+html.has-scroll-dragging {
+  user-select: none;
+}
+
+.has-scroll-smooth body {
+  overflow: hidden;
+}
