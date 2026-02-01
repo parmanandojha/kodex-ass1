@@ -6,15 +6,23 @@
   <title>Acelia</title>
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Locomotive Scroll -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css" />
   <style>
     /* Ensure navigation stays visible */
     header nav {
       position: fixed !important;
       z-index: 9999 !important;
     }
-    /* Smooth scrolling */
-    html {
-      scroll-behavior: smooth;
+    /* Locomotive Scroll smooth scrolling (replaces native smooth scroll) */
+    html.has-scroll-smooth {
+      overflow: hidden;
+    }
+    html.has-scroll-dragging {
+      user-select: none;
+    }
+    .has-scroll-smooth body {
+      overflow: hidden;
     }
   </style>
 </head>
@@ -38,7 +46,8 @@
         </div>
     </nav>
     </header>
-    
+
+    <div data-scroll-container>
     <main>
     <!--          Hero          -->    
     <section class="w-full  h-[130vh] px-[2%] bg-[#021c21] overflow-hidden">
@@ -76,7 +85,6 @@
             </div>
             <div class=" w-full sm:w-[50%] flex flex-col">
               <div class="w-full h-[60vh]"><img class="w-full h-full object-cover rounded-2xl" src="./images/expertiese.webp" alt="Expertise and excellence"></div>
-            </div>
             </div>
         </div>
     </section>
@@ -229,6 +237,17 @@
                 
     </footer>
     </main>
+    </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const scroller = new LocomotiveScroll({
+        el: document.querySelector('[data-scroll-container]'),
+        smooth: true,
+      });
+      window.addEventListener('load', () => scroller.update());
+    });
+  </script>
 </body>
 </html>

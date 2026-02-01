@@ -6,15 +6,23 @@
   <title>Acelia</title>
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Locomotive Scroll -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css" />
   <style>
     /* Ensure navigation stays visible */
     header nav {
       position: fixed !important;
       z-index: 9999 !important;
     }
-    /* Smooth scrolling */
-    html {
-      scroll-behavior: smooth;
+    /* Locomotive Scroll smooth scrolling (replaces native smooth scroll) */
+    html.has-scroll-smooth {
+      overflow: hidden;
+    }
+    html.has-scroll-dragging {
+      user-select: none;
+    }
+    .has-scroll-smooth body {
+      overflow: hidden;
     }
   </style>
 </head>
@@ -38,6 +46,8 @@
         </div>
     </nav>
     </header>
+
+    <div data-scroll-container>
     <div class="pt-[10vh]"></div>
 
 <main>
@@ -196,6 +206,17 @@
                 
     </footer>
     </main>
+    </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const scroller = new LocomotiveScroll({
+        el: document.querySelector('[data-scroll-container]'),
+        smooth: true,
+      });
+      window.addEventListener('load', () => scroller.update());
+    });
+  </script>
 </body>
 </html>
